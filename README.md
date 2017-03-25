@@ -30,31 +30,49 @@
 
 
 
-#### 5.3.5.添加git忽略清单 哪些文件不用被管理
+#### 5.3.4.添加git忽略清单 哪些文件不用被管理
 ```
 	建立.gitignore文件
 
 
 
 
-#### 5.3.6.提交被托管的文件变化到本地仓储
+#### 5.3.5.提交被托管的文件变化到本地仓储
 ```
 	git commit -m '提交日志' （把本地“全部”文件的变化提交到本地仓库存档）
 	git commit -m "xxx" yyy.file   （提交某一个文件）
 	
 
-#### 5.3.7.  git diff(提交后，和提交前的代码有什么不同)
+#### 5.3.6.  git diff(提交后，和提交前的代码有什么不同)
 ```
 
 
-#### 5.3.8.git log
+#### 5.3.7.git log
 ```
 	git log  查看提交版本次数
 
 
-#### 5.3.9.  回归到指定版本
+#### 5.3.8.  回归到指定版本
 ```
 	git reset --hard [path] //输入前6位
+
+
+
+#### 5.3.9  不用每次都输入密码 配置 config文件
+```
+	[core]
+		repositoryformatversion = 0
+		filemode = false
+		bare = false
+		logallrefupdates = true
+		symlinks = false
+		ignorecase = true
+	[remote "origin"]
+		url = https://[user:name]:[parsword:parsword]@github.com/youzhidong/my-todomvc.git
+		fetch = +refs/heads/*:refs/remotes/origin/*
+	[branch "master"]
+		remote = origin
+		merge = refs/heads/master
 
 
 #### 5.4.0  把文本拉到本地
@@ -96,19 +114,4 @@
 
 
 
-#### 5.4.2  不用每次都输入密码 配置 config文件
-```
 
-	[core]
-		repositoryformatversion = 0
-		filemode = false
-		bare = false
-		logallrefupdates = true
-		symlinks = false
-		ignorecase = true
-	[remote "origin"]
-		url = https://[user:name]:[parsword:parsword]@github.com/youzhidong/my-todomvc.git
-		fetch = +refs/heads/*:refs/remotes/origin/*
-	[branch "master"]
-		remote = origin
-		merge = refs/heads/master
