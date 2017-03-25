@@ -37,28 +37,28 @@
 
 
 #### 5.3.5.提交被托管的文件变化到本地仓储
-```
+
 	git commit -m '提交日志' （把本地“全部”文件的变化提交到本地仓库存档）
 	git commit -m "xxx" yyy.file   （提交某一个文件）
 	
 
 #### 5.3.6.  git diff(提交后，和提交前的代码有什么不同)
-```
+
 
 
 #### 5.3.7.git log
-```
+
 	git log  查看提交版本次数
 
 
 #### 5.3.8.  回归到指定版本
-```
+
 	git reset --hard [path] //输入前6位
 
 
 
 #### 5.3.9  不用每次都输入密码 配置 config文件
-```
+
 	[core]
 		repositoryformatversion = 0
 		filemode = false
@@ -75,13 +75,13 @@
 
 
 #### 5.4.0  把文本拉到本地
-```
+
 	git pull origin master
 
 
 
 #### 5.4.1 如果pull回来报错了
-```
+
 		error: Your local changes to the following files would be overwritten by merge:
         protected/config/main.php
 		Please, commit your changes or stash them before you can merge.
@@ -102,7 +102,7 @@
 
 
 #### 5.4.2  如何上传文件
-```
+
 	echo "# git_home" >> README.md
 	git init
 	git add README.md
