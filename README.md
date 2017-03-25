@@ -9,21 +9,26 @@
 	$ cd /dir
 	// 初始化本地仓储
 	$ git init
-		初始化一个本地仓库
+		初始化一个本地仓库。
+
+
 
 #### 5.3.3.查看本地仓储的变更状态
 ```
-	$ git status
+	$ git status  (如果出出红色  代表文件冲突)
+	    解决：编辑一下内容 > git add  > commit
+
 	$ git status -s
 	```
-	第一次查看是一堆没有被跟踪的文件
+		第一次查看是一堆没有被跟踪的文件。
 
 
 
 #### 5.3.4.添加本地暂存（托管）文件
 ```
 	添加指定文件名的文件
-	$ git add index.html
+	$ git add index.html。
+
 
 
 
@@ -43,11 +48,10 @@
 #### 5.3.7.  git diff(提交后，和提交前的代码有什么不同)
 ```
 
+
 #### 5.3.8.git log
 ```
 	git log  查看提交版本次数
-
-
 
 
 #### 5.3.9.  回归到指定版本
@@ -92,3 +96,21 @@
 	git push -u origin master
 	```
 
+
+
+#### 5.4.2  不用每次都输入密码 配置 config文件
+```
+
+	[core]
+		repositoryformatversion = 0
+		filemode = false
+		bare = false
+		logallrefupdates = true
+		symlinks = false
+		ignorecase = true
+	[remote "origin"]
+		url = https://[user:name]:[parsword:parsword]@github.com/youzhidong/my-todomvc.git
+		fetch = +refs/heads/*:refs/remotes/origin/*
+	[branch "master"]
+		remote = origin
+		merge = refs/heads/master
